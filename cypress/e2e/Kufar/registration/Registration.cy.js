@@ -6,17 +6,17 @@ describe('Registration form test', () => {
     const registrationForm = new RegistrationForm()
     const alertCookie = new AlertCookie()
 
-    const email = 'www'+'@gmail.com' //решить с рандом RandomUtils.getRandomString()
+    const email = 'www' + '@gmail.com'
     const password = 'Lika123456789'
     const confPass = 'Lika123456789'
 
     beforeEach('Open site', () => {
         cy.visit('https://www.kufar.by/l')
-        cy.viewport(1024, 768)
+        cy.viewport(1280, 720)
 
         alertCookie.clickAcceptCookie()
 
-       // registrationForm.siteIsOpen()
+        registrationForm.siteIsOpen()
     })
 
     it('Click registration form', () => {
